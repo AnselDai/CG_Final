@@ -194,15 +194,15 @@
         
         ![img\code_img\Camera\Camera_CPP_1](img/code_img/Camera/Camera_CPP_1.png)
         
-        ![img\code_img\Camera\Camera_CPP_2](img\code_img\Camera\Camera_CPP_2.png)
+        ![img\code_img\Camera\Camera_CPP_2](./img/code_img/Camera/Camera_CPP_2.png)
         
         使用Camera的lookAt矩阵作为观察物体的view矩阵：
         
-        ![img\code_img\Camera\main_CPP](img\code_img\Camera\main_CPP.png)
+        ![img\code_img\Camera\main_CPP](./img/code_img/Camera/main_CPP.png)
         
         结果：
         
-        ![img\code_img\Camera\Camera_demo](img\code_img\Camera\Camera_demo.gif)
+        ![img\code_img\Camera\Camera_demo](./img/code_img/Camera/Camera_demo.gif)
       
       - Simple lighting and shading
         
@@ -212,7 +212,7 @@
            
            通过一个常量的环境因子，乘以物体的颜色，就可以得到环境光照
            
-           ![img\code_img\Lighting\Ambient](img\code_img\Lighting\Ambient.png)
+           ![img\code_img\Lighting\Ambient](./img/code_img/Lighting/Ambient.png)
         
         2. 漫反射光照
            
@@ -220,17 +220,17 @@
            
            所以，首先要将法向量标准化，得到光线的方向向量，然后通过点乘得到该片段面向光源的角度，从而这个角度作为因子决定了该面被照亮的情况。
            
-           ![img\code_img\Lighting\Diffuse](img\code_img\Lighting\Diffuse.png)
+           ![img\code_img\Lighting\Diffuse](./img/code_img/Lighting/Diffuse.png)
         
         3. 镜面光照
            
            镜面光照由法向量和入射向量决定，不同的是，它还由观察的方向决定。所以是通过reflect( )函数来得到光线向量关于法向量对称的射出向量，通过射出向量和观察向量的点乘得到两者的角度，从而决定了物体在观察者眼中被照亮的情况。
            
-           ![img\code_img\Lighting\Specular](img\code_img\Lighting\Specular.png)
+           ![img\code_img\Lighting\Specular](./img/code_img/Lighting/Specular.png)
            
            结果演示：
            
-           ![img\code_img\Lighting\Lighting_demo](img\code_img\Lighting\Lighting_demo.png)
+           ![img\code_img\Lighting\Lighting_demo](./img/code_img/Lighting/Lighting_demo.png)
       
       - Texture mapping
         
@@ -246,9 +246,9 @@
            
            创建一个帧缓冲以及一个供帧缓冲的深度缓冲使用的2D纹理。然后在渲染循环中，设置好光源空间的变换矩阵lightSpaceMatrix和model矩阵，绑定帧缓冲，使用深度缓冲的Shader来渲染场景，从而得到了深度贴图
            
-           ![img\code_img\Shadow\depthMap_1](img\code_img\Shadow\depthMap_1.png)
+           ![img\code_img\Shadow\depthMap_1](./img/code_img/Shadow/depthMap_1.png)
            
-           ![img\code_img\Shadow\depthMap_2](img\code_img\Shadow\depthMap_2.png)
+           ![img\code_img\Shadow\depthMap_2](./img/code_img/Shadow\depthMap_2.png)
            
            深度缓冲的Shader的顶点着色器和片段着色器就很简单了，顶点着色器简单进行位置变换，由于没有用到颜色，所以片段着色器为空。
            
@@ -256,29 +256,29 @@
            Shadow_Depth.vs
            ```
            
-           ![img\code_img\Shadow\depthMap_VS](img\code_img\Shadow\depthMap_VS.png)
+           ![img\code_img\Shadow\depthMap_VS](./img/code_img/Shadow/depthMap_VS.png)
            
            ```
            Shadow_Depth.fs
            ```
            
-           ![img\code_img\Shadow\depthMap_FS](img\code_img\Shadow\depthMap_FS.png)
+           ![img\code_img\Shadow\depthMap_FS](./img/code_img/Shadow/depthMap_FS.png)
         
         2. 将深度贴图作为纹理渲染进入场景
            
            将深度贴图作为纹理绑定，然后Shader中，通过采样器sampler2D来获取对应的深度值，从而计算阴影。
            
-           ![img\code_img\Shadow\useDepthMap_1](img\code_img\Shadow\useDepthMap_1.png)
+           ![img\code_img\Shadow\useDepthMap_1](./img/code_img/Shadow/useDepthMap_1.png)
            
            计算阴影值：
            
-           ![img\code_img\Shadow\useDepthMap_2](img\code_img\Shadow\useDepthMap_2.png)
+           ![img\code_img\Shadow\useDepthMap_2](./img/code_img/Shadow/useDepthMap_2.png)
            
-           ![img\code_img\Shadow\useDepthMap_3](img\code_img\Shadow\useDepthMap_3.png)
+           ![img\code_img\Shadow\useDepthMap_3](./img/code_img/Shadow/useDepthMap_3.png)
            
            结果演示：
            
-           ![img\code_img\Shadow\Shadow_demo](img\code_img\Shadow\Shadow_demo.png)
+           ![img\code_img\Shadow\Shadow_demo](./img/code_img/Shadow/Shadow_demo.png)
       
       - Model import & Mesh viewing
         
@@ -290,7 +290,7 @@
         
         Assimp库读取这些数据，然后组成了下面这种树状的数据结构：
         
-        ![img\code_img\Model_Import\Assimp](img\code_img\Model_Import\Assimp.png)
+        ![img\code_img\Model_Import\Assimp](./img/code_img/Model_Import/Assimp.png)
         
         该库将模型加载入Scene对象中，然后又包含了顶点数据，索引数据，材料数据等，通过上面这张图，可以将数据获取，然后绑定顶点，所以，纹理等的坐标，读取mtl文件获取顶点的颜色，供Shader使用。
         
@@ -304,7 +304,7 @@
            Model.h
            ```
            
-           ![img\code_img\Model_Import\Model_H](img\code_img\Model_Import\Model_H.png)
+           ![img\code_img\Model_Import\Model_H](./img/code_img/Model_Import/Model_H.png)
            
            ```
            Model.cpp
@@ -312,15 +312,15 @@
            
            1. 载入模型，获得Scene对象，然后调用函数去处理Node
               
-              ![img\code_img\Model_Import\Model_H_1](img\code_img\Model_Import\Model_H_1.png)
+              ![img\code_img\Model_Import\Model_H_1](./img/code_img/Model_Import/Model_H_1.png)
            
            2. 一个Node包含多个Mesh，通过循环来处理该Node中的所有Mesh，处理完之后，逐个去处理子Node
               
-              ![img\code_img\Model_Import\Model_H_2](img\code_img\Model_Import\Model_H_2.png)
+              ![img\code_img\Model_Import\Model_H_2](./img/code_img/Model_Import/Model_H_2.png)
            
            3. 获取Mesh所包含的数据，然后送入新建的Mesh对象中
               
-              ![img\code_img\Model_Import\Model_H_3](img\code_img\Model_Import\Model_H_3.png)
+              ![img\code_img\Model_Import\Model_H_3](./img/code_img/Model_Import/Model_H_3.png)
         
         2. Mesh Viewing
            
@@ -328,11 +328,11 @@
            Mesh.h
            ```
            
-           ![img\code_img\Model_Import\Mesh_H](img\code_img\Model_Import\Mesh_H.png)
+           ![img\code_img\Model_Import\Mesh_H](./img/code_img/Model_Import/Mesh_H.png)
            
            用一个Struct结构来管理顶点数据和材料数据
            
-           ![img\code_img\Model_Import\Struct](img\code_img\Model_Import\Struct.png)
+           ![img\code_img\Model_Import\Struct](./img/code_img/Model_Import/Struct.png)
            
            ```
            Mesh.cpp
@@ -340,7 +340,7 @@
            
            在Mesh对象中就是和前面一样的过程，绑定顶点，设置顶点属性等
            
-           ![img\code_img\Model_Import\Mesh_CPP](img\code_img\Model_Import\Mesh_CPP.png)
+           ![img\code_img\Model_Import\Mesh_CPP](./img/code_img/Model_Import/Mesh_CPP.png)
            
            渲染的话，在Model的Draw函数中循环调用Mesh中的Draw函数，在Mesh中，就和前面一样渲染顶点出来就可以了
            
@@ -348,17 +348,17 @@
            Model中的Draw函数
            ```
            
-           ![img\code_img\Model_Import\Model_draw](img\code_img\Model_Import\Model_draw.png)
+           ![img\code_img\Model_Import\Model_draw](./img/code_img/Model_Import/Model_draw.png)
            
            ```
            Mesh中的Draw函数
            ```
            
-           ![img\code_img\Model_Import\Mesh_draw](img\code_img\Model_Import\Mesh_draw.png)
+           ![img\code_img\Model_Import\Mesh_draw](./img/code_img/Model_Import/Mesh_draw.png)
            
            结果演示：
            
-           ![img\code_img\Model_Import\Model_demo](img\code_img\Model_Import\Model_demo.png)
+           ![img\code_img\Model_Import\Model_demo](./img/code_img/Model_Import/Model_demo.png)
    
    2. Bonus
       
@@ -372,11 +372,11 @@
         
         我们原先的View矩阵，是一个4✖4的矩阵，将View矩阵削减成一个3✖3的矩阵，就将最后一列的位移给去掉了。但是我们需要的是4✖4的矩阵，所以最后将矩阵变换回4×4的矩阵。
         
-        ![img\code_img\Skybox\View](img\code_img\Skybox\View.png)
+        ![img\code_img\Skybox\View](./img/code_img/Skybox\View.png)
         
         结果演示：
         
-        ![img\code_img\Skybox\Skybox_demo](img\code_img\Skybox\Skybox_demo.gif)
+        ![img\code_img\Skybox\Skybox_demo](./img/code_img/Skybox/Skybox_demo.gif)
       
       - Gamma 矫正
         
@@ -388,11 +388,11 @@
         
         - 开启Gamma矫正之前
           
-          ![img\code_img\Gamma\before](img\code_img\Gamma\before.png)
+          ![img\code_img\Gamma\before](./img/code_img/Gamma/before.png)
         
         - 开启Gamma矫正之后
           
-          ![img\code_img\Gamma\after](img\code_img\Gamma\after.png)
+          ![img\code_img\Gamma\after](./img/code_img/Gamma/after.png)
           
           可以看到，开启了Gamma矫正之后，场景的光照情况更加自然真实
 
@@ -404,7 +404,7 @@
       
       一开始我们是将模型一整个导出，发现内存不足。后来经查找资料得知，我们的GLFW库仅仅兼容x86模式，x86模式是运行在32bit机器上的，内存最大就是2G，假如整个模型导入会出现内存不足的错误。但是我们可以将模型在blender中，分成一些小部分来导入，这样就可以解决这个内存不足的问题。
       
-      ![img\code_img\Problem_1\Models](img\code_img\Problem_1\Models.png)
+      ![img\code_img\Problem_1\Models](./img/code_img/Problem_1/Models.png)
    
    2. 教程中使用的是纹理贴图的形式，我们采用的是顶点上色，完全按照教程的做法无法导入颜色
       
@@ -412,11 +412,11 @@
       
       虽然没有贴图，但是颜色的数据还是保存在mtl文件里面的，所以除了从obj文件里面获取顶点数据等之外，Scene对象还包含了指向对应Material对象的指针，这里就可以获取到了需要的颜色值，将其送入Mesh就可以了。
       
-      ![img\code_img\Problem_2\Read_Color](img\code_img\Problem_2\Read_Color.png)
+      ![img\code_img\Problem_2\Read_Color](./img/code_img/Problem_2/Read_Color.png)
 
 7. <b>运行演示</b>
    
-   ![demo](demo.gif)
+   ![demo](./demo.gif)
 
 8. <b>小组成员贡献和分工</b>
    
