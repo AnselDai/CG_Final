@@ -1,16 +1,13 @@
 # SYSU Computer Graphics Final Project
 
-1. 下载到本地，然后进入执行文件所在目录
-   
-   ```
-   git clone https://github.com/AnselDai/ComputerGraphicsFinalProject.git
-   cd ComputerGraphicsFinalProject/bin
-   ```
+文件结构：
 
-2. 双击打开ComputerGraphics.exe
-
-![d1](./doc/img/res1.png)
-
-![d2](./doc/img/res2.png)
-
-
+> bin：执行文件所在的文件夹
+> 
+> blender__model：该项目建模的模型
+> 
+> doc：该项目的文档，包含小组报告，演示视频，图片等
+> 
+> project：该项目完整的可部署代码
+> 
+> src：该项目的核心代码
