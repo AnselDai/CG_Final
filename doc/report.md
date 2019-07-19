@@ -186,7 +186,7 @@
         Camera.h
         ```
         
-        ![img\code_img\Camera\Camera_H](img\code_img\Camera\Camera_H.png)
+        ![img\code_img\Camera\Camera_H](.\img\code_img\Camera\Camera_H.png)
         
         ```
         Camera.cpp
