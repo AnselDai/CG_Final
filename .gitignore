@@ -1,0 +1,3 @@
+# ignore the folder below
+bin/.vs
+bin/ComputerGraphics/x64
