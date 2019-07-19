@@ -64,7 +64,7 @@ void main()
 	vec3 specular = light.specular * spec * Specular.rgb;
 	// shadow
 	float shadow = 0.0f;
-	// float shadow = ShadowCaculation(FragPosLightSpace);
+	float shadow = ShadowCaculation(FragPosLightSpace);
 
 	vec3 result = ambient + (1.0 - shadow) * (diffuse + specular);
 

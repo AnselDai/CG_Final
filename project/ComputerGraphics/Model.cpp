@@ -27,7 +27,6 @@ void Model::processNode(aiNode * node, const aiScene * scene)
 
 Mesh Model::processMesh(aiMesh * mesh, const aiScene * scene)
 {
-	// cout << "Process Mesh" << endl;
 	vector<Vertex> vertices;
 	vector<unsigned int> indices;
 	vector<Texture> textures;
@@ -75,13 +74,10 @@ Mesh Model::processMesh(aiMesh * mesh, const aiScene * scene)
 	// 读取mtl文件顶点数据
 	material->Get(AI_MATKEY_COLOR_AMBIENT, color);
 	mat.Ka = glm::vec4(color.r, color.g, color.b, 1.0f);
-	//cout << "Ka: " << mat.Ka.r << ", " << mat.Ka.g << ", " << mat.Ka.b << endl;
 	material->Get(AI_MATKEY_COLOR_DIFFUSE, color);
 	mat.Kd = glm::vec4(color.r, color.g, color.b, 1.0f);
-	//cout << "Kd: " << mat.Kd.r << ", " << mat.Kd.g << ", " << mat.Kd.b << endl;
 	material->Get(AI_MATKEY_COLOR_SPECULAR, color);
 	mat.Ks = glm::vec4(color.r, color.g, color.b, 1.0f);
-	//cout << "Ks: " << mat.Ks.r << ", " << mat.Ks.g << ", " << mat.Ks.b << endl;
 
 	vector<Texture> diffuseMaps = loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
 	textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
