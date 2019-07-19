@@ -248,7 +248,7 @@
            
            ![img\code_img\Shadow\depthMap_1](./img/code_img/Shadow/depthMap_1.png)
            
-           ![img\code_img\Shadow\depthMap_2](./img/code_img/Shadow\depthMap_2.png)
+           ![img\code_img\Shadow\depthMap_2](./img/code_img/Shadow/depthMap_2.png)
            
            深度缓冲的Shader的顶点着色器和片段着色器就很简单了，顶点着色器简单进行位置变换，由于没有用到颜色，所以片段着色器为空。
            
@@ -372,7 +372,7 @@
         
         我们原先的View矩阵，是一个4✖4的矩阵，将View矩阵削减成一个3✖3的矩阵，就将最后一列的位移给去掉了。但是我们需要的是4✖4的矩阵，所以最后将矩阵变换回4×4的矩阵。
         
-        ![img\code_img\Skybox\View](./img/code_img/Skybox\View.png)
+        ![img\code_img\Skybox\View](./img/code_img/Skybox/View.png)
         
         结果演示：
         
