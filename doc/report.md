@@ -186,13 +186,13 @@
         Camera.h
         ```
         
-        ![img\code_img\Camera\Camera_H](.\img\code_img\Camera\Camera_H.png)
+        ![img\code_img\Camera\Camera_H](./img/code_img/Camera/Camera_H.png)
         
         ```
         Camera.cpp
         ```
         
-        ![img\code_img\Camera\Camera_CPP_1](img\code_img\Camera\Camera_CPP_1.png)
+        ![img\code_img\Camera\Camera_CPP_1](img/code_img/Camera/Camera_CPP_1.png)
         
         ![img\code_img\Camera\Camera_CPP_2](img\code_img\Camera\Camera_CPP_2.png)
         
